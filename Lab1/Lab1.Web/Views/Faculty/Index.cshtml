@@ -1,0 +1,15 @@
+﻿    @model Lab1.Web.Models.Faculty
+
+    @{
+        ViewBag.Title = Model.Name;
+    }
+
+    <h2>@Model.Name</h2>
+    <div>
+        @Html.DisplayNameFor(model => model.StudentsCount) :
+        @Html.DisplayFor(model => model.StudentsCount)
+    </div>
+<div>
+    @Html.DisplayNameFor(model => model.TeachersCount) :
+    @Html.DisplayFor(model => model.TeachersCount)
+</div>
