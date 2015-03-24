@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MyCoolApplication.Models;
+using Lab1.Web.Models;
 
-namespace MyCoolApplication.Controllers
+namespace Lab1.Web.Controllers
 {
-public class FacultyController : Controller
-{
-    // GET
-    public ActionResult Index()
+    public class FacultyController : Controller
     {
-        var faculty = new Faculty
+        // GET
+        public ActionResult Index()
         {
-            TeachersCount = 2,
-            StudentsCount = 10,
-            Name = "AC"
-        };
+            var faculty = new Faculty
+            {
+                TeachersCount = 2,
+                StudentsCount = 10,
+                Name = "AC"
+            };
 
-        return View(faculty);
+            return View(faculty);
+        }
     }
-}
 }

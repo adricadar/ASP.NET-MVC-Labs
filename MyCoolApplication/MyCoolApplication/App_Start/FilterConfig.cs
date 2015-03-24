@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace MyCoolApplication
+namespace Lab1.Web
 {
     public class FilterConfig
     {

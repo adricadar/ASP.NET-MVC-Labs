@@ -1,4 +1,4 @@
-﻿    @model MyCoolApplication.Models.Faculty
+﻿    @model Lab1.Web.Models.Faculty
 
     @{
         ViewBag.Title = Model.Name;
@@ -13,18 +13,3 @@
     @Html.DisplayNameFor(model => model.TeachersCount) :
     @Html.DisplayFor(model => model.TeachersCount)
 </div>
-
-@using (Ajax.BeginForm("Action", new AjaxOptions { HttpMethod = "Post", OnFailure = "ShowAjaxError", OnComplete = "ScrollToTop"}))
-{
-    <input type="submit" value="but 1" />
-    <input type="submit" value="but 2" />
-}
-<script>
-    function ScrollToTop() {
-
-        $('html, body').animate({ scrollTop: 0 }, 800);
-        console.log("clicked");
-
-        return false;
-    }
-</script>

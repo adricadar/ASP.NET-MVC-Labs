@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace MyCoolApplication.Models
+namespace Lab1.Web.Models
 {
     public class Faculty
     {
