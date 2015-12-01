@@ -1,0 +1,34 @@
+﻿@model Lab12.MiniApp.Models.UrlModel
+
+@{
+    ViewBag.Title = "Display";
+}
+
+<h2>Display</h2>
+
+<div>
+    <h4>UrlModel</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LongUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LongUrl)
+        </dd>
+
+        <dt>
+            Acces the long url with:
+        </dt>
+
+        <dd>
+            @String.Format("{0}://{1}{2}{3}", Request.Url.Scheme, Request.Url.Authority, Url.Content("~"), Model.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
