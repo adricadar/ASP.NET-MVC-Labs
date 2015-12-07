@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Lab3.Models.StudentModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nume)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bani)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Varsta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Restante)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var studentModel in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => studentModel.Nume)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => studentModel.Bani)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => studentModel.Varsta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => studentModel.Sex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => studentModel.Restante)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
